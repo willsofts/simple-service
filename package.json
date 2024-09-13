@@ -1,0 +1,39 @@
+{
+  "name": "simple-service",
+  "version": "1.0.0",
+  "description": "Simple Services",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --project ./",
+    "nat:api": "node dist/nats.api.js",
+    "nat:service": "node dist/nats.service.js",
+    "redis:api": "node dist/redis.api.js",
+    "redis:service": "node dist/redis.service.js",
+    "rabbit:api": "node dist/rabbit.api.js",
+    "rabbit:service": "node dist/rabbit.service.js",
+    "kafka:api": "node dist/kafka.api.js",
+    "kafka:service": "node dist/kafka.service.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "tassun_oro@hotmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@willsofts/will-api": "^1.0.13",
+    "@willsofts/will-db": "^1.0.52",
+    "@willsofts/will-sql": "^1.0.31",
+    "amqplib": "^0.10.4",
+    "ioredis": "^5.4.1",
+    "kafka-node": "^5.0.0",
+    "moleculer": "^0.14.34",
+    "moleculer-web": "^0.10.7",
+    "mysql2": "^3.11.2",
+    "nats": "^2.28.2"
+  }
+}

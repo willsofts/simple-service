@@ -1,0 +1,19 @@
+Test List
+1. NATs transporter
+    - nats.service    - basic usage NATs as a service
+    - nats.api        - basic usage NATs as a API gateway
+2. Redis transporter
+    - redis.service    - basic usage Redis as a service
+    - redis.api        - basic usage Redis as a API gateway
+3. RabbitMQ transporter
+    - rabbit.service    - basic usage RabbitMQ as a service
+    - rabbit.api        - basic usage RabbitMQ as a API gateway
+4. Kafka transporter
+    - kafka.service    - basic usage Kafka as a service
+    - kafka.api        - basic usage Kafka as a API gateway
+
+invoke api:
+curl http://localhost:8080/api/service/list
+curl http://localhost:8080/api/service/findby/BBL
+curl http://localhost:8080/api/service/collect?sharecode=BBL
+curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/api/service/collect -d "{\"sharecode\":\"BBL\"}"
