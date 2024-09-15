@@ -48,3 +48,26 @@ After startup service and api gateway separately then you can invoke by [curl](h
 * curl http://localhost:8080/api/service/findby/BBL
 * curl http://localhost:8080/api/service/collect?sharecode=BBL
 * curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/api/service/collect -d "{\"sharecode\":\"BBL\"}"
+
+### Service Runner
+
+Service runner using [will-run](https://github.com/willsofts/will-run) to handle process clustering
+
+- gateway/gateway.service   - this is api gateway
+- services/my.service       - this is simple service
+- moleculer.config.js       - this is configuration setting
+
+How to examine:
+
+1. run the following command seprately.
+
+```
+    npm run gateway
+    npm run service
+```
+
+2. run this command will fork process depending on number of CPUs.  
+
+```
+    npm run runner
+```

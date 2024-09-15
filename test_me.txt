@@ -11,6 +11,10 @@ Test List
 4. Kafka transporter
     - kafka.service    - basic usage Kafka as a service
     - kafka.api        - basic usage Kafka as a API gateway
+5. Service Runner
+    - gateway/gateway.service   - this is api gateway
+    - services/my.service       - this is simple service
+    - moleculer.config.js       - this is configuration setting
 
 invoke api:
 curl http://localhost:8080/api/service/list
